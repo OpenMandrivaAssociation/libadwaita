@@ -105,7 +105,6 @@ Header files for development with %{name}.
 %files common -f %{name}.lang
 
 %files -n %{libname}
-#{_libdir}/adwaita-%{api}.so.%{major}{,.*}
 %{_libdir}/libadwaita-%{api}.so.%{major}{,.*}
 
 %files -n %{giradwaitaname}
