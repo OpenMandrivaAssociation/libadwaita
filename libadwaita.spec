@@ -4,9 +4,9 @@
 
 %define api 1
 %define major 0
-%define libname %mklibname handy %{api} %{major}
-%define girhandyname %mklibname handy-gir %{api}
-%define devname %mklibname handy -d
+%define libname %mklibname adwaita %{api} %{major}
+%define girhandyname %mklibname adwaita-gir %{api}
+%define devname %mklibname adwaita -d
 
 %define git 20210409
 
