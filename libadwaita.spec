@@ -5,7 +5,7 @@
 %define api 1
 %define major 0
 %define libname %mklibname adwaita %{api} %{major}
-%define girhandyname %mklibname adwaita-gir %{api}
+%define giradwaitaname %mklibname adwaita-gir %{api}
 %define devname %mklibname adwaita -d
 
 %define git 20210409
@@ -28,7 +28,7 @@ BuildRequires:	gtk-doc
 BuildRequires:	sassc
 BuildRequires:	meson
 BuildRequires:	vala
-BuildRequires:	pkgcinfig(vapigen)
+BuildRequires:	pkgconfig(vapigen)
 BuildRequires:	pkgconfig(gladeui-2.0)
 BuildRequires:	pkgconfig(gnome-desktop-3.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
@@ -73,7 +73,7 @@ GObject Introspection interface description for %{name}.
 Summary:	Development package for %{name}
 Group:		Development/GNOME and GTK4
 Requires:	%{libname} = %{version}-%{release}
-Requires:	%{girhandyname} = %{version}-%{release}
+Requires:	%{giradwaitaname} = %{version}-%{release}
 Provides:	libadwaita-devel = %{version}-%{release}
 
 %description -n	%{devname}
