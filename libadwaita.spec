@@ -117,22 +117,22 @@ of the provided Handy widgets in Glade.
 %files common -f %{name}.lang
 
 %files -n %{libname}
-%{_libdir}/adwaita-%{api}.so.%{major}{,.*}
+#{_libdir}/adwaita-%{api}.so.%{major}{,.*}
 
 %files -n %{girhandyname}
-%{_libdir}/girepository-1.0/adwaita-%{api}.typelib
+#{_libdir}/girepository-1.0/adwaita-%{api}.typelib
 
 %files -n %{devname}
 %license COPYING
 %doc AUTHORS README.md
 %doc %{_datadir}/gtk-doc/html/libadwaita-%{api}/
-%{_includedir}/libadwaita-%{api}/
-%{_libdir}/libhandy-%{api}.so
-%{_datadir}/gir-1.0/adwaita-%{api}.gir
-%{_libdir}/pkgconfig/libadwaita-%{api}.pc
-%{_datadir}/vala/vapi/libadwaita-%{api}.deps
-%{_datadir}/vala/vapi/libadwaita-%{api}.vapi
+#{_includedir}/libadwaita-%{api}/
+#{_libdir}/libhandy-%{api}.so
+#{_datadir}/gir-1.0/adwaita-%{api}.gir
+#{_libdir}/pkgconfig/libadwaita-%{api}.pc
+#{_datadir}/vala/vapi/libadwaita-%{api}.deps
+#{_datadir}/vala/vapi/libadwaita-%{api}.vapi
 
 %files -n %{name}-glade
-%{_libdir}/glade/modules/*.so
-%{_datadir}/glade/catalogs/*.xml
+#{_libdir}/glade/modules/*.so
+#{_datadir}/glade/catalogs/*.xml
