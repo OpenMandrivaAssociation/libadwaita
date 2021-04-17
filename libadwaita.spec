@@ -59,11 +59,11 @@ help with developing mobile UI using GTK4/GNOME.
 
 #------------------------------------------------
 
-%package -n %{girhandyname}
+%package -n %{giradwaitaname}
 Summary:	GObject Introspection interface description for %{name}
 Group:		System/Libraries
 
-%description -n %{girhandyname}
+%description -n %{giradwaitaname}
 GObject Introspection interface description for %{name}.
 
 #------------------------------------------------
@@ -108,7 +108,7 @@ Header files for development with %{name}.
 #{_libdir}/adwaita-%{api}.so.%{major}{,.*}
 %{_libdir}/libadwaita-%{api}.so.%{major}{,.*}
 
-%files -n %{girhandyname}
+%files -n %{giradwaitaname}
 %{_libdir}/girepository-1.0/Adw-%{api}.typelib
 
 %files -n %{devname}
