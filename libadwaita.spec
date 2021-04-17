@@ -29,7 +29,6 @@ BuildRequires:	sassc
 BuildRequires:	meson
 BuildRequires:	vala
 BuildRequires:	pkgconfig(vapigen)
-BuildRequires:	pkgconfig(gladeui-2.0)
 BuildRequires:	pkgconfig(gnome-desktop-3.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk4)
@@ -55,7 +54,7 @@ Group:		System/Libraries
 Requires:	%{name}-common
 
 %description -n %{libname}
-This package provides the shared library for libhandy, a library to
+This package provides the shared library for libadwaita, a library to
 help with developing mobile UI using GTK4/GNOME.
 
 #------------------------------------------------
@@ -78,17 +77,6 @@ Provides:	libadwaita-devel = %{version}-%{release}
 
 %description -n	%{devname}
 Header files for development with %{name}.
-
-#------------------------------------------------
-
-%package -n %{name}-glade
-Summary:	Glade (GTK4) modules for %{name}
-Group:		Graphical desktop/GNOME
-Requires:	glade
-
-%description -n %{name}-glade
-This package provides a catalog for Glade (GTK4) which allows the use
-of the provided Handy widgets in Glade.
 
 #------------------------------------------------
 
@@ -118,21 +106,18 @@ of the provided Handy widgets in Glade.
 
 %files -n %{libname}
 #{_libdir}/adwaita-%{api}.so.%{major}{,.*}
+%{_libdir}/libadwaita-%{api}.so.%{major}{,.*}
 
 %files -n %{girhandyname}
-#{_libdir}/girepository-1.0/adwaita-%{api}.typelib
+%{_libdir}/girepository-1.0/Adw-%{api}.typelib
 
 %files -n %{devname}
 %license COPYING
 %doc AUTHORS README.md
 %doc %{_datadir}/gtk-doc/html/libadwaita-%{api}/
-#{_includedir}/libadwaita-%{api}/
-#{_libdir}/libhandy-%{api}.so
-#{_datadir}/gir-1.0/adwaita-%{api}.gir
-#{_libdir}/pkgconfig/libadwaita-%{api}.pc
-#{_datadir}/vala/vapi/libadwaita-%{api}.deps
-#{_datadir}/vala/vapi/libadwaita-%{api}.vapi
-
-%files -n %{name}-glade
-#{_libdir}/glade/modules/*.so
-#{_datadir}/glade/catalogs/*.xml
+%{_includedir}/libadwaita-%{api}/
+%{_libdir}/libadwaita-%{api}.so
+%{_libdir}/pkgconfig/libadwaita-%{api}.pc
+%{_datadir}/gir-1.0/Adw-%{api}.gir
+%{_datadir}/vala/vapi/libadwaita-%{api}.deps
+%{_datadir}/vala/vapi/libadwaita-%{api}.vapi
