@@ -8,20 +8,16 @@
 %define giradwaitaname %mklibname adwaita-gir %{api}
 %define devname %mklibname adwaita -d
 
-%define git 20210409
+%define	subversion	alpha.1
 
 Name:		libadwaita
-# Until kids from this project choose version scheme and correct version, let's use low version 0.1. Just for sanity check and to be sure 
-# that you don't have to lower the version later (because kids decided so) and add epochs unnecessarily.
-# https://gitlab.gnome.org/GNOME/libadwaita/-/issues/44
-# PS. the world doesn't end at Flatpak, which can be dangerous in many ways. People use the system repo! 
-Version:	0.1
-Release:	0.%{git}
+Version:	1.0.0
+Release:	0.%{subversion}.0
 Summary:	The aim of the Adwaita library is to help with developing UI for mobile devices using GTK/GNOME (based/forked from libhandy).
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
 URL:		https://gitlab.gnome.org/GNOME/libadwaita
-Source0:	https://gitlab.gnome.org/GNOME/libadwaita/-/archive/main/libadwaita-main.tar.bz2
+Source0:	https://gitlab.gnome.org/GNOME/libadwaita/-/archive/%{version}-%{subversion}/libadwaita-%{version}-%{subversion}.tar.bz2
 
 BuildRequires:	cmake
 BuildRequires:	gtk-doc
@@ -81,7 +77,7 @@ Header files for development with %{name}.
 #------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{name}-main
+%autosetup -p1 -n %{name}-%{version}-%{subversion}
 
 %build
 %meson \
