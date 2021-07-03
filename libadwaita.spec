@@ -110,7 +110,7 @@ Header files for development with %{name}.
 %files -n %{devname}
 %license COPYING
 %doc AUTHORS README.md
-%doc %{_datadir}/gtk-doc/html/libadwaita-%{api}/
+#doc #{_datadir}/gtk-doc/html/libadwaita-%{api}/
 %{_includedir}/libadwaita-%{api}/
 %{_libdir}/libadwaita-%{api}.so
 %{_libdir}/pkgconfig/libadwaita-%{api}.pc
