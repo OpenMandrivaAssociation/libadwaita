@@ -27,6 +27,7 @@ BuildRequires:	vala
 BuildRequires:	pkgconfig(vapigen)
 BuildRequires:	pkgconfig(gnome-desktop-3.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
+BuildRequires:	pkgconfig(gi-docgen)
 BuildRequires:	pkgconfig(gtk4)
 
 %description
