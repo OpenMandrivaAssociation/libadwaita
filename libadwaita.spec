@@ -111,6 +111,7 @@ Header files for development with %{name}.
 %license COPYING
 %doc AUTHORS README.md
 #doc #{_datadir}/gtk-doc/html/libadwaita-%{api}/
+%doc %{_docdir}/libadwaita-1/
 %{_includedir}/libadwaita-%{api}/
 %{_libdir}/libadwaita-%{api}.so
 %{_libdir}/pkgconfig/libadwaita-%{api}.pc
