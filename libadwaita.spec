@@ -17,7 +17,7 @@ Summary:	The aim of the Adwaita library is to help with developing UI for mobile
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
 URL:		https://gitlab.gnome.org/GNOME/libadwaita
-Source0:	https://gitlab.gnome.org/GNOME/libadwaita/-/archive/%{version}-%{subversion}/libadwaita-%{version}-%{subversion}.tar.bz2
+Source0:	https://gitlab.gnome.org/GNOME/libadwaita/-/archive/%{version}-%{subversion}/libadwaita-%{version}.%{subversion}.tar.bz2
 
 BuildRequires:	cmake
 BuildRequires:	gtk-doc
@@ -78,7 +78,7 @@ Header files for development with %{name}.
 #------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{name}-%{version}-%{subversion}
+%autosetup -p1 -n %{name}-%{version}.%{subversion}
 
 %build
 %meson \
