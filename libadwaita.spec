@@ -8,7 +8,7 @@
 %define giradwaitaname %mklibname adwaita-gir %{api}
 %define devname %mklibname adwaita -d
 
-%define	subversion	alpha.1
+%define	subversion	alpha.3
 
 Name:		libadwaita
 Version:	1.0.0
@@ -17,7 +17,7 @@ Summary:	The aim of the Adwaita library is to help with developing UI for mobile
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
 URL:		https://gitlab.gnome.org/GNOME/libadwaita
-Source0:	https://gitlab.gnome.org/GNOME/libadwaita/-/archive/%{version}-%{subversion}/libadwaita-%{version}-%{subversion}.tar.bz2
+Source0:	https://gitlab.gnome.org/GNOME/libadwaita/-/archive/%{version}-%{subversion}/libadwaita-%{version}.%{subversion}.tar.bz2
 
 BuildRequires:	cmake
 BuildRequires:	gtk-doc
@@ -78,7 +78,7 @@ Header files for development with %{name}.
 #------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{name}-%{version}-%{subversion}
+%autosetup -p1 -n %{name}-%{version}.%{subversion}
 
 %build
 %meson \
@@ -103,6 +103,7 @@ Header files for development with %{name}.
 
 %files -n %{libname}
 %{_libdir}/libadwaita-%{api}.so.%{major}{,.*}
+%{_libdir}/gtk-4.0/inspector/libadwaita-inspector-module%{api}.so.%{major}
 
 %files -n %{giradwaitaname}
 %{_libdir}/girepository-1.0/Adw-%{api}.typelib
@@ -114,6 +115,7 @@ Header files for development with %{name}.
 %doc %{_docdir}/libadwaita-1/
 %{_includedir}/libadwaita-%{api}/
 %{_libdir}/libadwaita-%{api}.so
+%{_libdir}/gtk-4.0/inspector/libadwaita-inspector-module%{api}.so
 %{_libdir}/pkgconfig/libadwaita-%{api}.pc
 %{_datadir}/gir-1.0/Adw-%{api}.gir
 %{_datadir}/vala/vapi/libadwaita-%{api}.deps
