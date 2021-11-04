@@ -103,7 +103,7 @@ Header files for development with %{name}.
 
 %files -n %{libname}
 %{_libdir}/libadwaita-%{api}.so.%{major}{,.*}
-%{_libdir}/gtk-4.0/inspector/libadwaita-inspector-module%{api}.so.%{major}
+#{_libdir}/gtk-4.0/inspector/libadwaita-inspector-module%{api}.so.%{major}
 
 %files -n %{giradwaitaname}
 %{_libdir}/girepository-1.0/Adw-%{api}.typelib
