@@ -8,7 +8,7 @@
 %define giradwaitaname %mklibname adwaita-gir %{api}
 %define devname %mklibname adwaita -d
 
-%define	subversion	alpha.3
+%define	subversion	alpha.4
 
 Name:		libadwaita
 Version:	1.0.0
