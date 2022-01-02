@@ -83,13 +83,11 @@ Header files for development with %{name}.
 %build
 %meson \
 	-Dprofiling=false \
-	-Dstatic=false \
 	-Dintrospection=enabled \
 	-Dvapi=true \
 	-Dgtk_doc=true \
 	-Dtests=false \
 	-Dexamples=false \
-	-Dglade_catalog=enabled \
 	%{nil}
 
 %meson_build
