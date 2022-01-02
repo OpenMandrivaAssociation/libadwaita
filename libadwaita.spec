@@ -113,7 +113,7 @@ Header files for development with %{name}.
 %doc %{_docdir}/libadwaita-1/
 %{_includedir}/libadwaita-%{api}/
 %{_libdir}/libadwaita-%{api}.so
-%{_libdir}/gtk-4.0/inspector/libadwaita-inspector-module%{api}.so
+#{_libdir}/gtk-4.0/inspector/libadwaita-inspector-module%{api}.so
 %{_libdir}/pkgconfig/libadwaita-%{api}.pc
 %{_datadir}/gir-1.0/Adw-%{api}.gir
 %{_datadir}/vala/vapi/libadwaita-%{api}.deps
