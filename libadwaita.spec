@@ -8,11 +8,11 @@
 %define giradwaitaname %mklibname adwaita-gir %{api}
 %define devname %mklibname adwaita -d
 
-%define	subversion	alpha.4
+#define	subversion	alpha.4
 
 Name:		libadwaita
 Version:	1.0.0
-Release:	0.%{subversion}.0
+Release:	1
 Summary:	The aim of the Adwaita library is to help with developing UI for mobile devices using GTK/GNOME (based/forked from libhandy).
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
@@ -78,7 +78,7 @@ Header files for development with %{name}.
 #------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{name}-%{version}.%{subversion}
+%autosetup -p1 -n %{name}-%{version}
 
 %build
 %meson \
