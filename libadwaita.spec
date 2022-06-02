@@ -11,7 +11,7 @@
 #define	subversion	alpha.4
 
 Name:		libadwaita
-Version:	1.1.1
+Version:	1.1.2
 Release:	1
 Summary:	The aim of the Adwaita library is to help with developing UI for mobile devices using GTK/GNOME (based/forked from libhandy).
 License:	LGPLv2+
