@@ -12,7 +12,7 @@
 
 Name:		libadwaita
 Version:	1.5.1
-Release:	1
+Release:	2
 Summary:	The aim of the Adwaita library is to help with developing UI for mobile devices using GTK/GNOME (based/forked from libhandy).
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
@@ -49,7 +49,9 @@ help with developing mobile UI using GTK4/GNOME.
 %package -n %{libname}
 Summary:	A GTK4 library to develop UI for mobile devices
 Group:		System/Libraries
-Requires:	%{name}-common
+Requires:	%{name}-common = %{version}-%{release}
+# DO NOT separate under any circumstances [ap]
+Requires:	%{giradwaitaname} = %{version}-%{release}
 
 %description -n %{libname}
 This package provides the shared library for libadwaita, a library to
