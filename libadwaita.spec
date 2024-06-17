@@ -19,7 +19,7 @@ Group:		Development/GNOME and GTK+
 URL:		https://gitlab.gnome.org/GNOME/libadwaita
 Source0:	https://gitlab.gnome.org/GNOME/libadwaita/-/archive/%{version}/libadwaita-%{version}.tar.bz2
 
-BuildRequires:	pkgconfig(appstream) <= 0.99
+BuildRequires:	pkgconfig(appstream) => 1.0.3
 BuildRequires:	cmake
 BuildRequires:	gtk-doc
 BuildRequires:	sassc
