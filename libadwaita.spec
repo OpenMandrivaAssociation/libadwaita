@@ -4,14 +4,16 @@
 
 %define api 1
 %define major 0
-%define libname %mklibname adwaita %{api} %{major}
-%define giradwaitaname %mklibname adwaita-gir %{api}
+%define libname %mklibname adwaita
+%define oldlibname %mklibname adwaita 1 0
+%define giradwaitaname %mklibname adwaita-gir
+%define oldgiradwaitaname %mklibname adwaita-gir 1
 %define devname %mklibname adwaita -d
 
 #define	subversion	20220617
 
 Name:		libadwaita
-Version:	1.6.3
+Version:	1.6.4
 Release:	1
 Summary:	The aim of the Adwaita library is to help with developing UI for mobile devices using GTK/GNOME (based/forked from libhandy).
 License:	LGPLv2+
@@ -40,6 +42,9 @@ using GTK/GNOME. This package is based on libhandy 1.2.0 and fork it for GTK4, w
 Summary:	A GTK+ library to develop UI for mobile devices
 Group:		System/Libraries
 
+Requires:	%{libname} = %{version}-%{release}
+Requires:	%{giradwaitaname} = %{version}-%{release}
+
 %description common
 This package provides the shared library for libadwaita, a library to
 help with developing mobile UI using GTK4/GNOME.
@@ -53,6 +58,8 @@ Requires:	%{name}-common = %{version}-%{release}
 # DO NOT separate under any circumstances [ap]
 Requires:	%{giradwaitaname} = %{version}-%{release}
 
+%rename %{oldlibname}
+
 %description -n %{libname}
 This package provides the shared library for libadwaita, a library to
 help with developing mobile UI using GTK4/GNOME.
@@ -62,6 +69,8 @@ help with developing mobile UI using GTK4/GNOME.
 %package -n %{giradwaitaname}
 Summary:	GObject Introspection interface description for %{name}
 Group:		System/Libraries
+
+%rename %{oldgiradwaitaname}
 
 %description -n %{giradwaitaname}
 GObject Introspection interface description for %{name}.
