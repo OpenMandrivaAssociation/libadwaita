@@ -13,7 +13,7 @@
 #define	subversion	20220617
 
 Name:		libadwaita
-Version:	1.9.3
+Version:	1.10.0
 Release:	1
 Summary:	The aim of the Adwaita library is to help with developing UI for mobile devices using GTK/GNOME (based/forked from libhandy).
 License:	LGPLv2+
@@ -21,7 +21,7 @@ Group:		Development/GNOME and GTK+
 URL:		https://gitlab.gnome.org/GNOME/libadwaita
 Source0:	https://gitlab.gnome.org/GNOME/libadwaita/-/archive/%{version}/libadwaita-%{version}.tar.bz2
 
-BuildRequires:	pkgconfig(appstream) => 1.0.3
+BuildRequires:	pkgconfig(appstream)
 BuildRequires:	cmake
 BuildRequires:	gtk-doc
 BuildRequires:	sassc
