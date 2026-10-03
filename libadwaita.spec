@@ -32,6 +32,7 @@ BuildRequires:	pkgconfig(gnome-desktop-3.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gi-docgen)
 BuildRequires:	pkgconfig(gtk4)
+BuildRequires:	pkgconfig(ministream)
 
 %description
 The aim of the Adwaita library is to help with developing UI for mobile devices
